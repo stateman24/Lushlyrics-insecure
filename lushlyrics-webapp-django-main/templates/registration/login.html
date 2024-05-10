@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    {% block css %}
+    <link rel="stylesheet" href="{% static "login.css" %}">
+    {% endblock %}
+</head>
+<body>
+    <div id="login-form">
+        <div id="login-form-header">
+            <h1>Sign-In</h1>
+        </div>
+        <div id="form">
+            <form class="form" action="{% url 'user:login' %}" method="post">
+                {% csrf_token %}
+                {{ form.username }}
+                <div class="form-button">
+                    <input type="submit" value="Log-in">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
