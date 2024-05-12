@@ -9,5 +9,6 @@ urlpatterns = [
     path('visitor/', vistor, name='visitor'),
     path('login/', auth_views.LoginView.as_view(authentication_form=SigninForm), name='login'),
     path('logout/', signout, name='logout'),
-    path('forgot-password/', auth_views.PasswordResetView.as_view(template_name="registration/forgot_password_form.html", form_class=ForgotPasswordForm), name='forgot-password')
+    path('reset-password/', auth_views.PasswordResetView.as_view(template_name="registration/forgot_password_form.html", form_class=ForgotPasswordForm), name='forgot-password'),
+    path('password-change/', auth_views.PasswordChangeView.as_view(), name='password-change'),
 ]
