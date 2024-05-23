@@ -78,3 +78,8 @@ body {
 .forgot-password a:hover{
     color: #1ed760;
 }
+
+span {
+    color: whitesmoke;
+    padding-top: 1rem;
+}
